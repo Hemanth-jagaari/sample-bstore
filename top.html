@@ -1,0 +1,111 @@
+<html><head>
+    
+    <script type='text/javascript'>
+    function result(){
+        var s=document.getElementById("ss");
+        var d=document.getElementById("search")
+        s.style.color="red";
+        alert("serch results fo r"+d.value);
+    }
+    </script>
+
+    <style>
+    
+    body {background-color:rgba(224, 16, 207, 0.699);}
+    .heading h1 {
+        position:absolute;
+        margin-left:250px;
+        margin-top:45px;
+        font-style:italic;
+
+        color:rgb(235, 14, 14);}
+    .header {
+        height: 190px;
+        width:1520px;
+        position:fixed;
+        background-image: url('media/bg_book_1.jpg');
+        background-size: 100% 100%;
+    }
+    .heading {
+        position:relative;
+        height:120px;
+        width:1350px;
+        margin-top:3px;
+        margin-left:66px;
+        background-color: black;
+
+    }
+    .navbar {
+                    background-color:black;
+                    
+                
+                    }
+    .navbar ul{
+                    overflow:auto;
+                    }
+    .navbar li{
+                    float:left;
+                    list-style:none;
+                    margin :13px 20px;
+                    }
+    .navbar li a{
+                    padding:3px 3px;
+                    text-decoration:none;
+                    color:white;
+                    
+                    }
+    .navbar li a:hover{
+                    color:red;
+                    
+                    }
+    .search {
+                    float:right;
+                    padding:10px 75px;
+                    }
+    .search input{
+        width:200px;
+    }
+    .navbar input{
+                    border:2px solid blue;
+                    border-radius:4px;
+                    padding:3px;
+                    
+                    }
+    .navbar input::placeholder{
+        opacity:0.6;
+        color:blue;
+
+    }
+    
+    </style>
+    </head>
+    
+    
+    
+    <body >
+        
+    <div class="header">
+    <br>
+    <div class="heading">
+    <h1>ONLINE BOOK STORE</h1></div>
+    <br>
+    <nav class="navbar"><ul>
+    <li><a href="right.html" target="right">HOME</a></li>
+    <li><a href="login.html" target="right">LOGIN</a></li>
+    <li><a href ="register.html" target="right">REGISTER</a></li>
+    <li><a href="#">CATOLOG</a></li>
+    <li><a href="#">CART</a></li>
+    <li><a href="feedback_1.html" target="right">FEEDBACK</a></li>
+    <li><a href="contact.html" target="right">CONTACT US</a></li>
+    
+    <div class="search">
+    <input type="text" name="search" id="search" placeholder="search books ...">
+    <button onclick="result()" style="font-size:20px;background-color:black;border:none;outline:none;cursor:pointer;"><i style="color:white;" id="ss" class="fas fa-search"></i></button>
+    </div>
+    </ul>
+    </nav>
+    </div>
+    <script src="https://kit.fontawesome.com/a076d05399.js"></script>
+    </body>
+    </html>
+    
