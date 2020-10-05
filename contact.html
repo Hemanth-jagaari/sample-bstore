@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <style>
+        body {
+            background-color:#cecece
+        }
+        .section {
+            background-color: #ffffff;
+            padding:15px;
+            margin-bottom: 10px;
+            margin-top: 10px;
+        }
+        h1 {
+            font-size:15px;
+            color:#20bcd5;
+            text-align: center;
+            padding:18px 0px 18px 0px;
+            margin:0 0 10px 0;
+        }
+        h1 span{
+            border:4px dashed #8de4f1;
+            padding:8px;
+        }
+        form{
+            text-align: center;
+            margin-top:0;
+        }
+        .submit{
+            background-color:#226b69;
+            padding:12px 45px;
+            border-radius: 5px;
+            cursor:pointer;
+            color:#ffffff;
+            border:none;
+            outline:none;
+            margin:0;
+            font-weight:bold;
+        }
+        .submit:hover{
+            background-color:#43a09d;
+        }
+        textarea{
+            height:100px;
+        }
+        input,textarea{
+            margin-bottom: 10px;
+            font-size:11pt;
+            padding:15px 10px 10px;
+            border:1px solid #cecece;
+            background-color: #efefef;
+            color:#787575;
+            border-radius: 5px;
+            width:70%;
+            outline:none;
+        }
+    </style>
+
+</head>
+<body>
+    <div class="section">
+        <h1><span>Contact US</span></h1>
+        <form>
+            <input type="text" name="name" placeholder="Enter name"><br>
+            <input type="email" name="email" placeholder="Ex:hunter@gmail.com"><br>
+            <input type="number" name="number" placeholder="Phone number"><br>
+            <textarea name="msg" placeholder="write message"></textarea><br>
+            <input type="submit" value="SEND" class="submit" >
+        </form>
+    </div>
+</body>
+</html>

@@ -1,0 +1,80 @@
+<head>
+    <style>
+        body {
+        
+            height:500px;
+            width:1400px;
+            background:-webkit-linear-gradient(white,rgb(122, 198, 221));
+            margin: 20px 50px 4px 20px;
+        }
+        .main {
+            width: 1200px;
+            height: 320px;
+            background:-webkit-linear-gradient(rgb(122,198,221),white);
+            position: fixed;
+            padding: 20px 5px;
+        }
+        input {
+            border-radius: 5%;
+            width: 900px;
+            height:40px;
+            padding:10px;
+            border:2px solid gray;
+        }
+        select {
+            border-radius: 5%;
+            width: 900px;
+            height:40px;
+            border:2px solid gray;
+            
+            
+        }textarea {
+            width:900px;
+            height:100px;
+            padding:10px 8px;
+            border:2px solid gray;
+        
+        }
+        button{
+            background-color: rgb(17, 157, 167);
+            color: aliceblue;
+            width:120px;
+            height:40px;
+            cursor:pointer;
+            border-radius: 10px;
+
+        }   
+    </style>
+</head>
+<body>
+<h1>FEEDBACK FORM</h1><br>
+<div class="main" >
+<form method="post">
+<table width="300%">
+<tr><td>
+<label align="left" for="fname" class="lab">First Name </label> </td><td>
+<input type="text" id="fname" placeholder="Your first name." ></td></tr>
+<tr><td>
+<label for="lname">Last Name</label></td><td><input type="text" id="lname" placeholder="Your  last name." ></td></tr>
+<tr><td>
+<label for="eid">Email Id</label></td><td><input type="email" placeholder="Your email id.." required ></td></tr>
+<tr><td>
+<label for="c">country</label></td><td><select id="c" name="country">
+<option value="" >Select Country</option>
+<option value="1">India</option>
+<option value="2">UK</option>
+<option value="3">USA</option>
+<option value="4">Japan</option>
+<option value="5">Australia</option>
+</select></td></tr>
+<tr><td rowspan="8">
+<label for="fb">Feed Back</label></td><td ><textarea id="fb" rows="8" cols="60" placeholder="write something...."></textarea></td>
+</tr></table></form>
+<table  style="width:98%"><tr><td></td>
+<td align="right"><button  onclick="submit()" ><b>submit</b></button></td></tr>
+</table>
+
+
+</div>
+
+</body>

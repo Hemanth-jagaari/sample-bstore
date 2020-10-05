@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <script type="text/javascript">
+    function telnum(){
+        var n=document.getElementById("num");
+        
+        var num=n.value;
+        if(num.length>10){
+            n.style.border="2px solid red";
+        }
+
+    }
+    function pwd(){
+        var p=document.getElementById("pass")
+        var pass=p.value;
+        alert(pass);
+        if(pass.trim=="" ||pass.trim.length<6){
+            p.style.border="2px solid red";
+
+        }
+
+    }
+    
+    function rpass(){
+        var p=document.getElementById("pass");
+        var rp=document.getElementById("rpass");
+        var l=document.getElementById("ptest");
+        if(p.value!=rp.value){
+            rp.style.border="2px solid red";
+            l.style.visibility="visible";
+        }
+    }
+    function check(){
+        var select=document.getElementById("c");
+        var opt=select.options[select.selectedIndex].value;
+        if(opt==""){
+            alert("select a country");
+        }
+    }
+    
+    </script>
+    <style>
+        .main{
+           
+            width:800px;
+            height:900px;
+            margin-top:20px;
+            margin-left:200px;
+            background-color:rgb(238, 206, 211);
+            padding:20px 40px 30px 40px;
+        }
+        td.right{
+            text-align: right;
+            color:black;
+        }
+        .main h1{
+            
+            font-size:25px;
+            text-align:center;
+            color:black;
+            
+        }
+        .frm table{
+            position:relative;
+            margin-left:130px;
+        }
+        input[type="text"],input[type="email"],input[type="password"],input[type="number"],input[type="date"]{
+            width:300px;
+            height:30px;
+            margin:6px;
+            font-size:20px;
+        }
+        input[type="radio"],input[type="checkbox"]{
+            width:50px;
+            height:25px;
+            margin:5px;
+        }
+        input[type="submit"],input[type="reset"]{
+            width:100px;
+            height:30px;
+            margin-left:10px;
+
+        
+        }
+        textarea{
+            width:400px;
+            height:80px;
+            margin:6px;
+        }
+        select{
+            width:200px;
+            height:30px;
+            margin:6px;
+        }
+        label{
+            color:rgb(15, 5, 5);
+        }
+
+
+
+        
+    </style>
+</head>
+
+
+
+
+
+<body><div class="main"><h1>REGISTRATION FORM</h1><br> 
+
+<form method="post" class="frm">
+<table>
+<tr><td class="right">User ID:</td><td><input type="text" id="user id" required></td></tr>
+<tr><td class="right">First Name:</td><td><input type="text" id="first name" required></td></tr>
+<tr><td class="right">Last Name:</td><td><input type="text" id="last nane" required></td></tr>
+<tr><td class="right">DOB:</td><td><input type="date" id="dob" required></td></tr>
+<tr><td class="right">Phone no:</td><td><input type="number" size="10" onblur="telnum()" id="num" required/></td></tr>
+<tr><td class="right">Email:</td><td><input type="email" id="em" required></td></tr>
+<tr><td class="right">Password:</td><td><input type="password" id="pass" onBlur="pwd()" required/> </td></tr>
+<tr><td class="right">Retype Password:</td><td><input type="password" onblur="rpass()" id="rpass"/><label id="ptest" style="visibility:hidden;color:red;">Must be same as above</label></td></tr>
+<tr><td class="right">Address:</td><td><textarea  id ="add"></textarea></td></tr>
+<tr><td class="right">Gender :</td><td><input type="radio" id="male"name="gender" value="male"><label for="male">Male</label><input type="radio" id="female"name="gender" value="female"><label for="female">Female</label><input type="radio" id="other"name="gender" value="other"><label for="other">Other</label></td></tr>
+<tr><td class="right">Country:</td><td><select id="c" name="country" onblur="check()" required>
+<option value="" >Select Country</option>
+<option value="1">India</option>
+<option value="2">UK</option>
+<option value="3">USA</option>
+<option value="4">Japan</option>
+<option value="5">Australia</option>
+</select></td></tr>
+<tr><td class="right">ZIP code:</td><td><input type="number" maxlength="6" id="zip" required></td></tr>
+<tr><td class="right">Languages known:</td><td><input type="checkbox" name="lang"id="c" value="c"><label for="c"> C</label><input type="checkbox" id="java" name="lang" value="java"><label for="java">JAVA</label> <input type="checkbox" id="py" name="lang" value="python"><label for="py">PYTHON</label><input type="checkbox" id="c++" name="lang" value="c++ "><label for="c++">C++</label>
+<tr><td class="right">About:</td><td><textarea id="about"></textarea></td></tr>
+<tr><td><input type="submit" value="submit"></td><td><input type="reset" value="reset"></td></tr>
+
+</form>
+
+
+
+</div></body>
+</html>

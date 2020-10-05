@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<head>
+    <script type="text/javascript" language="javascript">
+   function valid(){
+   
+   var name=document.getElementById("uname");
+   var pass=document.getElementById("password");
+   if( name.value.trim()=="" ){
+        name.style.border ="0 0 2px 0 solid red";
+        document.getElementById("name").style.visibility="visible";
+       return false;
+   }
+   else if (pass.value.trim()=="" || pass.value==null){
+
+       return false;
+   }
+   else if(pass.value.trim().length<5){
+       document.getElementById("pass").style.visibility="visible";
+       return false;
+   }
+   else{
+       return true;
+   }
+   }
+    
+    </script>
+<style>
+    body{
+        background-image: url("media/bg_book_3.jpg");
+        background-repeat: no-repeat;
+        background-size:100% 100%;
+        width:800px;
+        height:500px;
+    }
+    .main{
+        padding:20px;
+        background:-webkit-linear-gradient(cyan,gray);
+        width:350px;
+        height:350px;
+        margin:0 auto;
+        top:60px;
+        left: 680px;
+        position:absolute;
+        text-decoration:none;
+        line-height: 20px;
+        font-size:15px;
+    }
+    .main p{
+        margin:0;
+        padding:10px 0 5px;
+        font-style: italic;
+        color:white;
+        font-weight: bold;
+        font-family:courier;
+    }
+    .main h1{
+        text-align:center;
+    }
+    .main input[type="text"],input[type="password"]{
+        border:none;
+        padding-bottom: 5px;
+        border-bottom:1px solid rgb(224, 12, 214);
+        background:transparent;
+        width:80%;
+        color:#000;
+        outline:none;
+        height:30px;
+        margin-bottom: 20px;
+        font-weight:bolder;
+    }
+    .main input[type="submit"]{
+        width:100px;
+        margin-top:5px;
+        height: 30px;
+        border-radius: 4px;
+        color:blue;
+        font-weight:bolder;
+        font-size:15px;
+        font-weight: bolder;
+        font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+        cursor: pointer;
+
+    }
+    .main label{
+        color:red;
+        font-size:20px;
+        font-weight: bolder;
+        visibility: hidden;
+    }
+</style>
+</head>
+<body>
+<div class="main">
+
+<h1>LOGIN</h1>
+<form onsubmit="return valid()" action="message.html" class="form">
+
+<p>Username</p> <input type="text" id="uname" placeholder="Enter user name..." required><label id="name">Invalid</label><br>
+<p>Password </p> <input type="password" id="password" placeholder="Enter password ..." required><label id="pass">Weak</label><br>
+<input type="submit" name="submit" value="LOGIN">
+<div class="einfo">
+    <p> Forgot passwword -> <a href="_blank" target="right">Click Here</a></p>
+    <p> Don't have an account? <a href="register.html" target="right">Sign UP Here</a></p>
+</div>
+
+
+</form>
+
+</div>
+
+
+</body>
